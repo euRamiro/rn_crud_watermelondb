@@ -1,11 +1,11 @@
 import {Model} from '@nozbe/watermelondb';
 import {field, relation} from '@nozbe/watermelondb/decorators';
 
-export default class Review extends Model {
+export default class Telefones extends Model {
   static table = 'telefones';
 
   static associations = {
-    movie: {type: 'belongs_to', key: 'contato_id'},
+    contato: {type: 'belongs_to', key: 'contato_id'},
   };
 
   @field('numero') numero;

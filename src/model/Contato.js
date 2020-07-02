@@ -1,11 +1,11 @@
 import {Model} from '@nozbe/watermelondb';
 import {field, date, children} from '@nozbe/watermelondb/decorators';
 
-export default class Movie extends Model {
+export default class Contato extends Model {
   static table = 'contato';
 
   static associations = {
-    reviews: {type: 'telefones', foreignKey: 'contato_id'},
+    telefones: {type: 'telefones', foreignKey: 'contato_id'},
   };
 
   @field('nome') nome;
@@ -25,8 +25,7 @@ export default class Movie extends Model {
 
   async addTelefones(body) {
     return this.collections.get('telefones').create((telefone) => {
-      telefone.movie.set(this);
-      telefone.body = body;
+      telefone.numero.set(this);
     });
   }
 

@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
   botaoSalvar: {
-    margin: 15,
+    margin: 5,
   },
   textoBotaoSalvar: {
     fontSize: 22,
